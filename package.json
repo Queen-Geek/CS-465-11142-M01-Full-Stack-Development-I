@@ -12,5 +12,10 @@
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "Reconstructing app to adhere to MVC model",
+  "main": "app.js",
+  "author": "Urika Pye",
+  "license": "ISC",
+  "devDependencies": {}
 }
