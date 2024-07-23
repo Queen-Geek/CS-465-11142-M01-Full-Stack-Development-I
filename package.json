@@ -16,6 +16,17 @@
   "description": "Reconstructing app to adhere to MVC model",
   "main": "app.js",
   "author": "Urika Pye",
-  "license": "ISC",
-  "devDependencies": {}
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Queen-Geek/CS-465-11142-M01-Full-Stack-Development-I.git"
+  },
+  "keywords": [
+    "MEAN",
+    "stack"
+  ],
+  "bugs": {
+    "url": "https://github.com/Queen-Geek/CS-465-11142-M01-Full-Stack-Development-I/issues"
+  },
+  "homepage": "https://github.com/Queen-Geek/CS-465-11142-M01-Full-Stack-Development-I#readme"
 }
