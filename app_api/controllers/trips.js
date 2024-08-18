@@ -31,7 +31,7 @@ const tripsList = async(req, res) => {
 
 const tripsFindByCode = async(req, res) => {
     const q = await Model
-        .find({' code' : req.params.tripCode }) // Returns single recod
+        .find({ code : req.params.tripCode }) // Returns single recod
         .exec();
 
         // Uncomment the following code to show query results in console
