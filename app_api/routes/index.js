@@ -4,10 +4,13 @@ const tripsController = require('../controllers/trips');
 
 router
     .route('/trips')
-    .get(tripsController.tripsList);
-
-router
-    .route('/trips/:tripCode')
-    .get(tripsController.tripsFindByCode);
+    .get((req, res) => {
+        console.log('GET /api/trips hit');
+        tripsController.tripsList(req, res);
+    })
+    .post((req, res) => {
+        console.log('POST /api/trips hit');
+        tripsController.tripsAddTrip(req, res);
+    });
 
 module.exports = router;
