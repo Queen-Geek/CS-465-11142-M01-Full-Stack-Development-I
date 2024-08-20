@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trips } from '../data/trips';
 import { TripCardComponent } from '../trip-card/trip-card.component';
+import { RouterModule } from '@angular/router';
+
 
 import { Trip } from '../models/trip';
 import { TripDataService } from '../services/trip-data.service';
@@ -12,7 +14,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-trip-listing',
   standalone: true,
-  imports: [CommonModule, TripCardComponent],
+  imports: [CommonModule, TripCardComponent, RouterModule],
   templateUrl: './trip-listing.component.html',
   styleUrl: './trip-listing.component.css',
   providers: [TripDataService]
@@ -27,6 +29,10 @@ export class TripListingComponent implements OnInit {
     private router: Router
   ) {
     console.log('trip-listing constructor');
+  }
+  
+  public editTrip(tripCode: string) {
+    this.router.navigate(['/edit-trip', tripCode]); // Navigates to /edit-trip/:code
   }
 
   public addTrip(): void {

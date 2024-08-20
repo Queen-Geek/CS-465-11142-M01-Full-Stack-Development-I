@@ -12,10 +12,10 @@ import { TripDataService } from '../services/trip-data.service';
   styleUrl: './add-trip.component.css'
 })
 
-
 export class AddTripComponent implements OnInit {
   addForm!: FormGroup;
   submitted = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -24,7 +24,6 @@ export class AddTripComponent implements OnInit {
 
   ngOnInit() {
     this.addForm = this.formBuilder.group({
-      //_id: [],
       code: ['', Validators.required],
       name: ['', Validators.required],
       length: ['', Validators.required],
@@ -33,14 +32,15 @@ export class AddTripComponent implements OnInit {
       perPerson: ['', Validators.required],
       image: ['', Validators.required],
       description: ['', Validators.required],
-    })
+    });
+    console.log('Form initialized:', this.addForm);
   }
   public onSubmit() {
-    console.log('Submit button clicked!'); // Log to ensure the function is being called
+    console.log('Form submit initiated'); // Log to ensure the function is being called
     this.submitted = true;
-    console.log('Form Submitted:', this.addForm.value); // Log form submission
 
     if (this.addForm.valid) {
+      console.log('Form is valid, submitting:', this.addForm.value);
       this.tripService.addTrip(this.addForm.value)
         .subscribe({
           next: (data: any) => {

@@ -1,7 +1,7 @@
 <!-- <p>add-trip works!</p> -->
 <div class="col-md-4">
-    <form *ngIf="addForm" [formGroup]="addForm" (ngSubmit)="onSubmit()">
-        <button type="submit" class="btn btn-link text-center" (click)="onSubmit()">Add Trip</button>
+    <form *ngIf="editForm" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <button type="submit" class="btn btn-link text-center">Edit Trip</button>
 
         <div class="form-group">
             <label>Code:</label>
